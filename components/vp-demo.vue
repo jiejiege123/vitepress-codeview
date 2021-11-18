@@ -39,6 +39,7 @@ import { useClipboard } from '@vueuse/core'
 
 
 import CopyIcon from './icons/copy-icon.vue'
+
 import SourceCodeIcon from './icons/source-code.vue'
 
 import ExampleDemo from './demo/vp-example.vue'
@@ -92,7 +93,7 @@ export default {
     //   read: false,
     // })
 
-console.log(props.rawSource)
+// console.log(props.rawSource)
 
     console.log(useClipboard);
   },
