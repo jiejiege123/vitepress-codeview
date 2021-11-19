@@ -12,13 +12,14 @@
 		"markdown-it": "^12.2.0",
 		"markdown-it-container": "^3.0.0",
 		"sass": "^1.43.4",
+		"sucrase": "^3.20.3",
 		"unplugin-vue-components": "^0.17.2",
 		"vitepress": "^0.20.1",
 		"yorkie": "^2.0.0"
 	},
 	"scripts": {
 		"dev": "vitepress dev . --port 3001",
-		"build": "node ./.vitepress/scripts/rewrite-title/ && vitepress build .",
+		"build": "node ./.vitepress/scripts/rewrite-title/ && vitepress build . --verbose",
 		"serve": "vitepress serve ."
 	},
 	"dependencies": {

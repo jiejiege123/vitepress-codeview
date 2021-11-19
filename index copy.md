@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 2
+title: 什么是 VitePress？
 ---
 
 # 什么是 VitePress？ {#what-is-vitepress}

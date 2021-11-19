@@ -1,8 +1,4 @@
-:::demo 这是很多描述
 
-test/index.vue
-
-:::
 <style>
 
   .red{
@@ -13,21 +9,14 @@ test/index.vue
     color: red;
   }
 </style>
-:::demo 这是很多描述afasf
 
-test/index1.html
-
-:::
-
-
-啊打发发达打发手动阀手动阀
-:::demo 这是
-
+::: demo 你好啊
 test/ace.vue
-
 :::
 
-<!-- <VpDemo link="/test/index.vue" description="这是前言" language="vue" /> -->
+::: demo 你好啊
+test/index1.html
+:::
 
 <p class="red">121212</p>
 
@@ -37,7 +26,4 @@ test/ace.vue
     color:red
   }
 
-  .se {
-    color: red;
-  }
 </style>

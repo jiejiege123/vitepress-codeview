@@ -71,12 +71,15 @@ export const mdPlugin = (md) => {
             // })
 
             // 只了更新一次 应该有个监听
-            
+
+            // path.resolve(docRoot, 'examples', `${sourceFile}`)
             hoistedTags.push(`
             <script setup>
-            const demos = import.meta.globEager('./examples/${
+            const demos = import.meta.globEager('/examples/${
               sourceFile.split('/')[0]
             }/*.vue')
+
+            console.log(demos)
             
             </script>`)
           }

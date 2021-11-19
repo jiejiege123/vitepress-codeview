@@ -3,6 +3,8 @@
  * @LastEditors: zzz
  */
 
+require('sucrase/register/js')
+
 const { mdPlugin } = require('./plugins/plugins')
 
 module.exports = {
@@ -55,9 +57,6 @@ module.exports = {
     },
     config: (md) => mdPlugin(md),
 
-    // config: (md) => {
-    //   md.use(require('./plugins/markdown-it-custom-anchor'))
-    // }
   }
 }
 

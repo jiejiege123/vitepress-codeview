@@ -1,35 +1,48 @@
-<!--
- * @Author: zzz
- * @LastEditors: zzz
--->
-<script setup>
 
-defineProps({
-  file: {
-    type: String,
-    required: true,
-  },
-  demo: {
-    type: Object,
-    required: true,
-  },
-  source: {
-    type: String,
-    default: ''
-  }
-})
-</script>
 
 <template>
   <div class="example-showcase">
     <ClientOnly>
       <component :is="demo" v-if="demo" v-bind="$attrs" />
-      <div v-else v-html="source">
-      </div>
+      <!-- <div v-else v-html="source">
+      </div> -->
+      <iframe v-else width="100%" ref="iframe" frameborder="0" ></iframe>
     </ClientOnly>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    file: {
+      type: String,
+      required: true,
+    },
+    demo: {
+      type: Object,
+      required: true,
+    },
+    source: {
+      type: String,
+      default: ''
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
 
+      this.$refs.iframe.contentDocument.documentElement.innerHTML = this.source;
+
+      var bHeight = this.$refs.iframe.contentWindow.document.body.scrollHeight
+      if (bHeight > 150) {
+        this.$refs.iframe.height = bHeight
+      } else {
+        this.$refs.iframe.height = 30
+      }
+      
+    })
+  },
+
+}
+</script>
 <style lang="scss" scoped>
 .example-showcase {
   padding: 1rem;
