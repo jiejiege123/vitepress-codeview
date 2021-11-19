@@ -4,7 +4,7 @@
  */
 import DefaultTheme from 'vitepress/theme'
 
-import VpDemo from '../../components/vp-demo.vue'
+import VpDemo from '../vitepress/components/vp-demo.vue'
 
 export default {
   ...DefaultTheme,

@@ -2,10 +2,9 @@
  * @Author: zzz
  * @LastEditors: zzz
 -->
+<script setup>
 
-<script setup lang="ts">
-import { onMounted } from 'vue'
-let props = defineProps({
+defineProps({
   file: {
     type: String,
     required: true,
@@ -14,14 +13,19 @@ let props = defineProps({
     type: Object,
     required: true,
   },
+  source: {
+    type: String,
+    default: ''
+  }
 })
-
 </script>
 
 <template>
   <div class="example-showcase">
     <ClientOnly>
       <component :is="demo" v-if="demo" v-bind="$attrs" />
+      <div v-else v-html="source">
+      </div>
     </ClientOnly>
   </div>
 </template>
@@ -30,7 +34,7 @@ let props = defineProps({
 .example-showcase {
   padding: 1rem;
   margin: 0.5px;
-  background-color: var(--bg-color);
+  background-color: #ffffff;
   &.transparent-enabled {
     background-image: linear-gradient(
         45deg,

@@ -1,3 +1,10 @@
+/*
+ * @Author: zzz
+ * @LastEditors: zzz
+ */
+
+const { mdPlugin } = require('./plugins/plugins')
+
 module.exports = {
   lang: 'zh-Hans',
   title: 'VitePress',
@@ -46,9 +53,11 @@ module.exports = {
     anchor: {
       renderPermalink: require('./plugins/render-perma-link')
     },
-    config: (md) => {
-      md.use(require('./plugins/markdown-it-custom-anchor'))
-    }
+    config: (md) => mdPlugin(md),
+
+    // config: (md) => {
+    //   md.use(require('./plugins/markdown-it-custom-anchor'))
+    // }
   }
 }
 
