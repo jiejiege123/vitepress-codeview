@@ -6,7 +6,7 @@
       <component :is="demo" v-if="demo" v-bind="$attrs" />
       <!-- <div v-else v-html="source">
       </div> -->
-      <iframe v-else width="100%" ref="iframe" frameborder="0" ></iframe>
+      <iframe v-else width="100%" ref="iframe" frameborder="0"  scrolling="no"></iframe>
     </ClientOnly>
   </div>
 </template>
@@ -30,15 +30,14 @@ export default {
     this.$nextTick(() => {
 
       this.$refs.iframe.contentDocument.documentElement.innerHTML = this.source;
-
+      // console.log(this.$refs.iframe.contentDocument.documentElement.clientHeight);
       var bHeight = this.$refs.iframe.contentWindow.document.body.scrollHeight
       if (bHeight > 150) {
         this.$refs.iframe.height = bHeight
-      } else {
-        this.$refs.iframe.height = 30
-      }
-      
+      } 
     })
+
+
   },
 
 }

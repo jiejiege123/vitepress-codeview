@@ -18,6 +18,10 @@ test/ace.vue
 test/index1.html
 :::
 
+::: demo 你好啊
+test/index2.html
+:::
+
 <p class="red">121212</p>
 
 <style>
