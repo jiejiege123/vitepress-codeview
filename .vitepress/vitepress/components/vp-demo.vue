@@ -11,6 +11,8 @@ import SourceCodeIcon from './icons/source-code.vue'
 import CodepenIcon from './icons/codepen.vue'
 import CopyIcon from './icons/copy-icon.vue'
 
+import {ElTooltip, ElIcon, ElDivider, ElCollapseTransition} from 'element-plus'
+
 import Example from './demo/vp-example.vue'
 import SourceCode from './demo/vp-source-code.vue'
 import Codepen from './demo/vp-codepen.vue'
@@ -68,12 +70,10 @@ const { copy, isSupported } = useClipboard({
 const [sourceVisible, setSourceVisible] = useToggle()
 // const lang = useLang()
 const demoSourceUrl = useSourceCode(toRef(props, 'path'))
-console.log('props.demos', props.demos);
 const formatPathDemos = computed(() => {
   const demos = {}
 
   Object.keys(props.demos).forEach((key) => {
-    console.log('key', key);
     demos[key.replace('/examples/', '')] =
       props.demos[key].default
   })
