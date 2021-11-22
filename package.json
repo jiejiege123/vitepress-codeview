@@ -1,8 +1,8 @@
 {
-	"name": "vitepress-docs-cn",
+	"name": "vitepress-for-html-vue",
 	"version": "1.0.0",
 	"description": "Vitepress documentation Chinese translation.",
-	"author": "Evan You",
+	"author": "jiejiege123",
 	"license": "MIT",
 	"private": true,
 	"devDependencies": {
