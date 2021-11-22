@@ -1,11 +1,10 @@
 <script setup lang="ts">
+// ctrl + v element-plus-docs
 import { computed, toRef, ref, getCurrentInstance } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import { useToggle } from '../composables/toggle'
-// import { useLang } from '../composables/lang'
 import { useSourceCode } from '../composables/source-code'
 
-// import demoBlockLocale from '../../i18n/component/demo-block.json'
 import GithubIcon from './icons/github.vue'
 import SourceCodeIcon from './icons/source-code.vue'
 import CodepenIcon from './icons/codepen.vue'
@@ -68,7 +67,6 @@ const { copy, isSupported } = useClipboard({
 })
 
 const [sourceVisible, setSourceVisible] = useToggle()
-// const lang = useLang()
 const demoSourceUrl = useSourceCode(toRef(props, 'path'))
 const formatPathDemos = computed(() => {
   const demos = {}
@@ -81,15 +79,7 @@ const formatPathDemos = computed(() => {
   return demos
 })
 
-
-// const formatPathDemo = toRef(props, 'demos')
-
-// 没用变化
-
-// console.log(formatPathDemo);
-
 const codepenRef = ref()
-// const locale = computed(() => demoBlockLocale[lang.value])
 const decodedDescription = computed(() => decodeURIComponent(props.description))
 
 const onCodepenClicked = () => {

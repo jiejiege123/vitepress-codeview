@@ -1,3 +1,7 @@
+/*
+ * @Author: zzz
+ * @LastEditors: zzz
+ */
 // #region snippet
 function foo() {
   // ..

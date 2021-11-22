@@ -3,7 +3,6 @@
  * @LastEditors: zzz
  */
 
-// require('sucrase/register/js')
 import 'element-plus/dist/index.css'
 
 import DefaultTheme from 'vitepress/theme'

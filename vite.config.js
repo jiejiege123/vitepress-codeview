@@ -2,7 +2,6 @@
  * @Author: zzz
  * @LastEditors: zzz
  */
-// require('sucrase/register/js')
 
 import Components from 'unplugin-vue-components/vite'
 

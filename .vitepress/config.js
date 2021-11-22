@@ -2,7 +2,6 @@
  * @Author: zzz
  * @LastEditors: zzz
  */
-// require('sucrase/register/js')
 
 const { mdPlugin } = require('./plugins/plugins')
 
@@ -37,10 +36,10 @@ module.exports = {
         link: '/config/basics',
         activeMatch: '^/config/'
       },
-      {
-        text: '发行说明',
-        link: 'https://github.com/vuejs/vitepress/releases'
-      }
+      // {
+      //   text: '发行说明',
+      //   link: 'https://github.com/vuejs/vitepress/releases'
+      // }
     ],
 
     sidebar: {
@@ -64,27 +63,16 @@ function getGuideSidebar() {
     {
       text: '介绍',
       children: [
-        { text: '什么是 VitePress？', link: '/' },
-        { text: '入门', link: '/guide/getting-started' },
-        { text: '配置', link: '/guide/configuration' },
-        { text: '静态资源处理', link: '/guide/assets' },
-        { text: 'Markdown 扩展', link: '/guide/markdown' },
-        { text: '在 Markdown 中使用 Vue', link: '/guide/using-vue' },
-        { text: '部署', link: '/guide/deploy' }
+        { text: '什么是 VitePress？', link: '/guide/api' },
       ]
     },
-    {
-      text: '进阶',
-      children: [
-        { text: 'Frontmatter', link: '/guide/frontmatter' },
-        { text: '主题', link: '/guide/theming' },
-        { text: 'API 参考', link: '/guide/api' },
-        {
-          text: '与 VuePress 的区别',
-          link: '/guide/differences-from-vuepress'
-        }
-      ]
-    }
+    // {
+    //   text: '进阶',
+    //   children: [
+    //     { text: 'API 参考', link: '/guide/api' },
+      
+    //   ]
+    // }
   ]
 }
 
@@ -94,13 +82,11 @@ function getConfigSidebar() {
       text: '应用设置',
       children: [{ text: '基础知识', link: '/config/basics' }]
     },
-    {
-      text: '主题设置',
-      children: [
-        { text: '首页', link: '/config/homepage' },
-        { text: 'Algolia 搜索', link: '/config/algolia-search' },
-        { text: 'Carbon 广告', link: '/config/carbon-ads' }
-      ]
-    }
+    // {
+    //   text: '主题设置',
+    //   children: [
+    //     { text: '首页', link: '/config/homepage' },
+    //   ]
+    // }
   ]
 }
