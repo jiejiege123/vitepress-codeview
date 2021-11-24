@@ -14,8 +14,6 @@ import { language } from 'gray-matter'
 const localMd = MarkdownIt()
 const scriptSetupRE = /<\s*script[^>]*\bsetup\b[^>]*/
 
-
-
 export const mdPlugin = (md) => {
   md.use(require('./markdown-it-custom-anchor'))
 
@@ -25,12 +23,12 @@ export const mdPlugin = (md) => {
     },
 
     render(tokens, idx) {
+
       const data = md.__data
       const hoistedTags = data.hoistedTags || (data.hoistedTags = [])
 
       const m = tokens[idx].info.trim().match(/^demo\s*(.*)$/)
       
-
       if (tokens[idx].nesting === 1 /* means the tag is opening */) {
         const description = m && m.length > 1 ? m[1] : ''
         const sourceFileToken = tokens[idx + 2]
@@ -48,39 +46,13 @@ export const mdPlugin = (md) => {
           })
 
           if (existingScriptIndex === -1) {
-          //   <script setup>
-          //   const demos = import.meta.globEager('../../examples/${
-          //   sourceFile
-          // }')
-
-          // 这里的做法是将文件夹下面的例子都读一遍
-            // import { onMounted, ref } from 'vue'
-            // const demos = ref()
-            // console.log('${
-            //   sourceFile
-            //   }')
-            // onMounted(async() => {
-            //   let link = '../../examples/${
-            //     sourceFile
-            //     }'
-            //   await import(link).then((module) => {
-            //     demos.value = module.default
-
-            //     console.log(demos)
-            //   })
-            // })
-
-            // 只了更新一次 应该有个监听
-
-            // path.resolve(docRoot, 'examples', `${sourceFile}`)
+  
             hoistedTags.push(`
             <script setup>
             const demos = import.meta.globEager('/examples/${
               sourceFile.split('/')[0]
             }/*.vue')
 
-            console.log(demos)
-            
             </script>`)
           }
         }
@@ -108,8 +80,6 @@ export const mdPlugin = (md) => {
       }
     },
   } )
-
-  
 }
 
 function generateCodePenSnippet(source) {

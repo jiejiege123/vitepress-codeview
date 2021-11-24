@@ -1,7 +1,7 @@
 {
-	"name": "vitepress-for-html-vue",
+	"name": "vitepress-codeview",
 	"version": "1.0.0",
-	"description": "Vitepress documentation Chinese translation.",
+	"description": "Vitepress that can view code.",
 	"author": "jiejiege123",
 	"license": "MIT",
 	"private": true,

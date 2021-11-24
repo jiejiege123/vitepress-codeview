@@ -1,3 +1,7 @@
+<!--
+ * @Author: zzz
+ * @LastEditors: zzz
+-->
 
 
 <template>
@@ -28,16 +32,22 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-
-      this.$refs.iframe.contentDocument.documentElement.innerHTML = this.source;
-      // console.log(this.$refs.iframe.contentDocument.documentElement.clientHeight);
-      var bHeight = this.$refs.iframe.contentWindow.document.body.scrollHeight
-      if (bHeight > 150) {
-        this.$refs.iframe.height = bHeight
-      } 
+      if (this.$refs.iframe) {
+        this.$refs.iframe.contentDocument.documentElement.innerHTML = this.source;
+        var bHeight = this.$refs.iframe.contentWindow.document.body.scrollHeight
+        if (bHeight > 150) {
+          this.$refs.iframe.height = bHeight
+        } 
+      }
     })
 
-
+    // setTimeout(() => {
+    //   this.$refs.iframe.contentDocument.documentElement.innerHTML = this.source;
+    //   var bHeight = this.$refs.iframe.contentWindow.document.body.scrollHeight
+    //   if (bHeight > 150) {
+    //     this.$refs.iframe.height = bHeight
+    //   } 
+    // }, 500);
   },
 
 }

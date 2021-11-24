@@ -7,35 +7,35 @@ const { mdPlugin } = require('./plugins/plugins')
 
 module.exports = {
   lang: 'zh-Hans',
-  title: 'VitePress',
-  description: 'Vite 与 Vue 驱动的静态站点生成器',
+  title: 'VitePress-codeview',
+  description: '针对组件、html开发预览的Vitepress',
 
   themeConfig: {
-    repo: 'docschina/vitepress-docs-cn',
+    repo: 'jiejiege123/vitepress-codeview',
     docsDir: 'docs',
 
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页面',
     lastUpdated: '上次更新',
 
-    algolia: {
-      apiKey: 'c57105e511faa5558547599f120ceeba',
-      indexName: 'vitepress'
-    },
+    // algolia: {
+    //   apiKey: 'c57105e511faa5558547599f120ceeba',
+    //   indexName: 'vitepress'
+    // },
 
-    carbonAds: {
-      carbon: 'CEBDT27Y',
-      custom: 'CKYD62QM',
-      placement: 'vuejsorg'
-    },
+    // carbonAds: {
+    //   carbon: 'CEBDT27Y',
+    //   custom: 'CKYD62QM',
+    //   placement: 'vuejsorg'
+    // },
 
     nav: [
-      { text: '指南', link: '/', activeMatch: '^/$|^/guide/' },
-      {
-        text: '配置参考',
-        link: '/config/basics',
-        activeMatch: '^/config/'
-      },
+      { text: '指南', link: '/guide/', activeMatch: '^/$|^/guide/' },
+      // {
+      //   text: '配置参考',
+      //   link: '/config/basics',
+      //   activeMatch: '^/config/'
+      // },
       // {
       //   text: '发行说明',
       //   link: 'https://github.com/vuejs/vitepress/releases'
@@ -45,7 +45,7 @@ module.exports = {
     sidebar: {
       '/guide/': getGuideSidebar(),
       '/config/': getConfigSidebar(),
-      '/': getGuideSidebar()
+      // '/': getGuideSidebar()
     }
   },
 
@@ -63,16 +63,18 @@ function getGuideSidebar() {
     {
       text: '介绍',
       children: [
-        { text: '什么是 VitePress？', link: '/guide/api' },
+        { text: '弄啥呢', link: '/guide/' },
+        { text: '配置', link: '/guide/start' },
       ]
     },
-    // {
-    //   text: '进阶',
-    //   children: [
-    //     { text: 'API 参考', link: '/guide/api' },
+    {
+      text: '使用',
+      children: [
+        { text: '基本使用', link: '/guide/use' },
+        { text: 'TODO', link: '/guide/todo' },
       
-    //   ]
-    // }
+      ]
+    }
   ]
 }
 
