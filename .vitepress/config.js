@@ -1,7 +1,4 @@
-/*
- * @Author: zzz
- * @LastEditors: zzz
- */
+require('sucrase/register/js')
 
 const { mdPlugin } = require('./plugins/plugins')
 

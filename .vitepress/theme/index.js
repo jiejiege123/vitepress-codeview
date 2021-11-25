@@ -1,8 +1,3 @@
-/*
- * @Author: zzz
- * @LastEditors: zzz
- */
-
 import 'element-plus/dist/index.css'
 
 import DefaultTheme from 'vitepress/theme'
