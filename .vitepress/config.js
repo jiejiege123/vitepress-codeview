@@ -27,7 +27,8 @@ module.exports = {
     // },
 
     nav: [
-      { text: '指南', link: '/guide/', activeMatch: '^/$|^/guide/' },
+      { text: '指南', link: '/guide/', activeMatch: '^/guide/' },
+      // { text: '指南', link: '/guide/', activeMatch: '^/$|^/guide/' },
       // {
       //   text: '配置参考',
       //   link: '/config/basics',
