@@ -1,4 +1,4 @@
-require('sucrase/register/js')
+require('sucrase/register')
 
 const { mdPlugin } = require('./plugins/plugins')
 

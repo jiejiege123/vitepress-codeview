@@ -1,9 +1,3 @@
-<!--
- * @Author: zzz
- * @LastEditors: zzz
--->
-
-
 <template>
   <div class="example-showcase">
     <ClientOnly>
@@ -14,7 +8,7 @@
     </ClientOnly>
   </div>
 </template>
-<script>
+<script lang="ts">
 export default {
   props: {
     file: {

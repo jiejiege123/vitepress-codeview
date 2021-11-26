@@ -5,7 +5,6 @@ const workspacePath = path.resolve(__dirname, '..', '..', '..')
 
 const h1MdRegExp = /^#\s+(.+)\s+(\{#([\w-]+)\})$/
 /** 在此书写所有文章所在的目录名 */
-/** examples 必须要有，否则热更新无效 */
 const articleDirs = ['config', 'guide']
 
 const rewriteMarkdownTitle = (filePath) => {

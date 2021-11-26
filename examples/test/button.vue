@@ -6,7 +6,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Button } from '@element-plus/icons'
+import { ElButton } from 'element-plus'
 
 let count = ref(0)
 
