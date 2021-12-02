@@ -1,8 +1,11 @@
 import 'element-plus/dist/index.css'
 
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme from './theme-element'
+
 
 import VpDemo from '../vitepress/components/vp-demo.vue'
+
+import Layout from './Layout.vue'
 
 export default {
   ...DefaultTheme,
