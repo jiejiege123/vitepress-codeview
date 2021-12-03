@@ -9,6 +9,7 @@ import Layout from './Layout.vue'
 
 export default {
   ...DefaultTheme,
+  Layout,
   enhanceApp({ app }) {
     app.component('VpDemo', VpDemo)
   }

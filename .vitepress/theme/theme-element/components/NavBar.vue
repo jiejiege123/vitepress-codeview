@@ -1,3 +1,7 @@
+<!--
+ * @Author: zzz
+ * @LastEditors: zzz
+-->
 <script setup lang="ts">
 import NavBarTitle from './NavBarTitle.vue'
 import NavLinks from './NavLinks.vue'

@@ -6,16 +6,6 @@ import { computed } from 'vue'
 import { useData } from 'vitepress'
 import { joinUrl } from '../utils'
 
-import type { PageData } from 'vitepress'
-
-type EnhanceArrayElement<T, P> = T extends Array<infer U> ? (U & P)[] : never
-
-type Headers = EnhanceArrayElement<
-  PageData['headers'],
-  {
-    children?: Headers
-  }
->
 
 export const useToc = () => {
   const { page } = useData()
@@ -23,7 +13,7 @@ export const useToc = () => {
   return computed(() => resolveHeaders(page.value.headers))
 }
 
-export const resolveLink = (base: string, path: string) => {
+export const resolveLink = (base, path) => {
   if (path === undefined) {
     return path
   }
@@ -34,11 +24,11 @@ export const resolveLink = (base: string, path: string) => {
   return joinUrl(base, path)
 }
 
-export const resolveHeaders = (headers: PageData['headers']) => {
+export const resolveHeaders = (headers) => {
   return mapHeaders(groupHeaders(headers))
 }
 
-export function groupHeaders(headers: PageData['headers']) {
+export function groupHeaders(headers) {
   headers = headers.map((h) => Object.assign({}, h))
   let lastH2
 
@@ -52,7 +42,7 @@ export function groupHeaders(headers: PageData['headers']) {
   return headers.filter((h) => h.level === 2)
 }
 
-export function mapHeaders(headers: Headers) {
+export function mapHeaders(headers) {
   return headers.map((header) => ({
     text: header.title,
     link: `#${header.slug}`,
