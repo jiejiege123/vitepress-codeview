@@ -1,3 +1,7 @@
+/*
+ * @Author: zzz
+ * @LastEditors: zzz
+ */
 require('sucrase/register')
 
 const { mdPlugin } = require('./plugins/plugins')
@@ -27,7 +31,7 @@ module.exports = {
     // },
 
     nav: [
-      { text: '指南', link: '/guide/', activeMatch: '^/guide/' },
+      { text: '指南', link: '/guide/', activeMatch: '^/guide/' }
       // { text: '指南', link: '/guide/', activeMatch: '^/$|^/guide/' },
       // {
       //   text: '配置参考',
@@ -42,7 +46,7 @@ module.exports = {
 
     sidebar: {
       '/guide/': getGuideSidebar(),
-      '/config/': getConfigSidebar(),
+      '/config/': getConfigSidebar()
       // '/': getGuideSidebar()
     }
   },
@@ -51,8 +55,7 @@ module.exports = {
     anchor: {
       renderPermalink: require('./plugins/render-perma-link')
     },
-    config: (md) => mdPlugin(md),
-
+    config: (md) => mdPlugin(md)
   }
 }
 
@@ -62,15 +65,14 @@ function getGuideSidebar() {
       text: '介绍',
       children: [
         { text: '弄啥呢', link: '/guide/' },
-        { text: '配置', link: '/guide/start' },
+        { text: '配置', link: '/guide/start' }
       ]
     },
     {
       text: '使用',
       children: [
         { text: '基本使用', link: '/guide/use' },
-        { text: 'TODO', link: '/guide/todo' },
-      
+        { text: 'TODO', link: '/guide/todo' }
       ]
     }
   ]
@@ -81,7 +83,7 @@ function getConfigSidebar() {
     {
       text: '应用设置',
       children: [{ text: '基础知识', link: '/config/basics' }]
-    },
+    }
     // {
     //   text: '主题设置',
     //   children: [
