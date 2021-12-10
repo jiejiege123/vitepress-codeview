@@ -34,6 +34,7 @@
 		"serve": "vitepress serve ."
 	},
 	"dependencies": {
+		"@vueuse/core": "^7.2.2",
 		"element-plus": "^1.2.0-beta.3",
 		"highlight.js": "^11.3.1"
 	}
